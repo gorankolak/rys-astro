@@ -1,0 +1,48 @@
+---
+const links = [
+  { label: 'Bandcamp', href: 'https://raveyoursoul.bandcamp.com/' },
+  { label: 'SoundCloud', href: 'https://soundcloud.com/rave-your-soul' },
+  { label: 'Instagram', href: 'https://www.instagram.com/rave.your.soul/' },
+  {
+    label: 'Spotify',
+    href: 'https://open.spotify.com/playlist/02KRGOQrsLuz5ByYXAZ4fx',
+  },
+  { label: 'YouTube', href: 'https://www.youtube.com/@raveyoursoul/' },
+  { label: 'Contact', href: '#contact' },
+]
+---
+
+<!-- <ul class="flex w-full max-w-xs flex-col gap-4">
+  {
+    links.map((link) => (
+      <li>
+        <a
+          href={link.href}
+          target={link.href.startsWith('http') ? '_blank' : undefined}
+          rel="noreferrer"
+          class="block w-full border border-white/30 py-3 tracking-wider uppercase transition hover:bg-white hover:text-black"
+        >
+          {link.label}
+        </a>
+      </li>
+    ))
+  }
+</ul> -->
+<ul class="flex w-full max-w-sm flex-col gap-4">
+  {
+    links.map((link) => (
+      <li>
+        <a
+          href={link.href}
+          target={link.href.startsWith('http') ? '_blank' : undefined}
+          rel="noreferrer"
+          class="font-heading group block w-full border border-white/20 py-4 tracking-widest uppercase backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-black"
+        >
+          <span class="inline-block transition-transform group-hover:translate-x-1">
+            {link.label}
+          </span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

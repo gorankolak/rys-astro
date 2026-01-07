@@ -1,0 +1,23 @@
+---
+type LogoSize = 'sm' | 'md' | 'lg'
+
+interface Props {
+  size?: LogoSize
+  alt?: string
+}
+
+const { size = 'lg', alt = 'Rave Your Soul' } = Astro.props as Props
+
+const sizes: Record<LogoSize, string> = {
+  sm: 'h-6',
+  md: 'h-8',
+  lg: 'h-10',
+}
+---
+
+<img
+  src="/images/rave-your-soul-logo.png"
+  alt={alt}
+  class={`block ${sizes[size]} w-auto select-none md:h-14`}
+  loading="eager"
+/>

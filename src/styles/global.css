@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+/* Fonts */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/space-grotesk/SpaceGrotesk-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+
+  --rys-black: #0b0b0b;
+  --rys-warm-white: #f5f1eb;
+  --rys-orange: #ff7a1a;
+  --rys-lime: #caff00;
+  --rys-red: #ff3b30;
+}
+
+@layer utilities {
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Typography system */
+.prose-rys h1 {
+  font-family: var(--font-heading);
+  @apply mb-6 text-4xl tracking-tight md:text-6xl;
+}
+
+.prose-rys h2 {
+  font-family: var(--font-heading);
+  @apply mb-4 text-2xl md:text-3xl;
+}
+
+.prose-rys p {
+  font-family: var(--font-body);
+  @apply mb-6 text-base leading-relaxed text-white/80 md:text-lg;
+}
+
+.prose-rys blockquote {
+  border-left: 4px solid var(--rys-orange);
+  padding-left: 1rem;
+
+  @apply text-white/90 italic;
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(40px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatSlower {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-30px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 20s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: floatSlower 30s ease-in-out infinite;
+}

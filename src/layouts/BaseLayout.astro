@@ -1,0 +1,54 @@
+---
+import '../styles/global.css'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+
+const {
+  title = 'Rave Your Soul',
+  description = 'Independent techno label focused on groove-driven, modern electronic music.',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raveyoursoul.com" />
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <!-- Fonts (example – adjust if needed) -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  </head>
+
+  <body class="font-body bg-(--rys-black) text-(--rys-warm-white) antialiased">
+    <Header />
+
+    <main class="flex min-h-screen flex-col items-center justify-center px-6">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- <div class="fixed inset-0 -z-10 overflow-hidden">
+      <div
+        class="animate-float-slow absolute -top-40 -left-40 h-[600px] w-[600px] bg-[color:var(--rys-orange)] opacity-20 blur-[160px]"
+      >
+      </div>
+      <div
+        class="animate-float-slower absolute right-0 bottom-0 h-[500px] w-[500px] bg-[color:var(--rys-lime)] opacity-10 blur-[140px]"
+      >
+      </div>
+    </div> -->
+  </body>
+</html>
