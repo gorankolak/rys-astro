@@ -2,19 +2,19 @@
 import Logo from './Logo.astro'
 ---
 
-<header
-  class="absolute top-0 left-0 z-20 flex w-full items-center justify-between px-6 py-8"
->
-  <a href="/" aria-label="Rave Your Soul home">
-    <Logo />
-  </a>
-
-  <nav>
-    <a
-      href="/our-story"
-      class="font-heading text-xs tracking-[0.3em] text-white/60 uppercase transition hover:text-white md:text-sm"
-    >
-      Our Story
+<header class="px-6 pt-8">
+  <div class="mx-auto flex max-w-5xl items-center justify-between">
+    <a href="/" aria-label="Rave Your Soul home">
+      <Logo />
     </a>
-  </nav>
+
+    <nav>
+      <a
+        href="/our-story"
+        class="font-heading text-xs tracking-[0.3em] text-white/60 uppercase transition hover:text-white"
+      >
+        Our Story
+      </a>
+    </nav>
+  </div>
 </header>
