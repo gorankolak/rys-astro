@@ -36,6 +36,16 @@ const {
   </head>
 
   <body class="bg-(--rys-black) text-(--rys-orange) antialiased">
+    <!-- Background animations -->
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div class="rys-space">
+        <div class="shape shape-disc layer-mid"></div>
+        <div class="shape shape-ring layer-back"></div>
+        <div class="shape shape-bar layer-front"></div>
+        <div class="shape shape-poly layer-mid"></div>
+      </div>
+    </div>
+
     <div class="grid min-h-screen grid-rows-[auto_1fr_auto]">
       <Header />
 
