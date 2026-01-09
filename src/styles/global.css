@@ -29,11 +29,8 @@
   --font-body: 'Inter', system-ui, sans-serif;
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
 
-  --rys-black: #0b0b0b;
-  --rys-warm-white: #f5f1eb;
-  --rys-orange: #ff7a1a;
-  --rys-lime: #caff00;
-  --rys-red: #ff3b30;
+  --rys-black: #14120f;
+  --rys-orange: #e76f51;
 }
 
 html {
@@ -73,36 +70,4 @@ html {
   padding-left: 1rem;
 
   @apply text-white/90 italic;
-}
-
-@keyframes floatSlow {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(40px, -30px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes floatSlower {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-30px, 20px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.animate-float-slow {
-  animation: floatSlow 20s ease-in-out infinite;
-}
-
-.animate-float-slower {
-  animation: floatSlower 30s ease-in-out infinite;
 }

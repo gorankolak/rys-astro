@@ -20,7 +20,7 @@ const links = [
           href={link.href}
           target={link.href.startsWith('http') ? '_blank' : undefined}
           rel="noreferrer"
-          class="font-heading group block w-full border border-white/20 py-4 tracking-widest uppercase backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-black"
+          class="font-heading group block w-full rounded-2xl border border-white/20 py-4 tracking-widest uppercase backdrop-blur-sm transition-all duration-300 hover:border-(--rys-orange) hover:bg-(--rys-orange) hover:text-(--rys-black)"
         >
           <span class="inline-block transition-transform group-hover:translate-x-1">
             {link.label}
