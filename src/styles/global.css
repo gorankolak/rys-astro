@@ -113,7 +113,7 @@ html {
   height: 120px;
   background: rgba(122, 48, 108, 0.8);
   top: 15%;
-  right: -180px;
+  right: -200px;
   animation: drift-bar 45s ease-in-out infinite;
 }
 
@@ -207,5 +207,17 @@ html {
   }
   50% {
     opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .shape-bar {
+    display: none;
   }
 }

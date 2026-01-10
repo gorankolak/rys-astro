@@ -1,5 +1,7 @@
 ---
 import Logo from './Logo.astro'
+
+const isOurStory = Astro.url.pathname.startsWith('/our-story')
 ---
 
 <header class="px-6 pt-8">
@@ -11,7 +13,16 @@ import Logo from './Logo.astro'
     <nav>
       <a
         href="/our-story"
-        class="font-heading text-xs tracking-[0.3em] text-white/60 uppercase transition hover:text-white"
+        aria-current={isOurStory ? 'page' : undefined}
+        class={`font-heading text-md tracking-[0.3em] text-(--rys-orange)
+  uppercase underline-offset-4
+  transition
+  ${
+    isOurStory
+      ? 'underline opacity-80 cursor-default'
+      : 'hover:underline hover:opacity-80'
+  }
+`}
       >
         Our Story
       </a>
